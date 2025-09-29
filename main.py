@@ -1,12 +1,15 @@
 import config
-from industrial_etl_pipeline import data_simulator, extract, transform, load
+import data_simulator
+import extract
+import transform
+import load
 from datetime import datetime, timedelta
 import os
 
 def run_pipeline():
     """Main function to orchestrate the ETL pipeline."""
     
-    # SIMULATION STEP
+    # SIMULATION STEP 
     print("Starting Data Simulation Step ")
     yesterday = (datetime.now() - timedelta(1)).strftime("%Y-%m-%d")
     for i in range(1, 11): # Simulate 10 machines
@@ -15,7 +18,7 @@ def run_pipeline():
             date=yesterday, 
             output_path=config.RAW_DATA_DIR
         )
-    print("Data Simulation Complete \n")
+    print(" Data Simulation Complete \n")
     
     # ETL PIPELINE
     print("Starting ETL Pipeline ")
@@ -42,8 +45,7 @@ def run_pipeline():
             df=transformed_df,
             project_id=config.GCP_PROJECT_ID,
             dataset_id=config.BQ_DATASET,
-            table_id=config.BQ_TABLE,
-            schema_path=config.SCHEMA_PATH
+            table_id=config.BQ_TABLE
         )
         
         print("\n--- ETL Pipeline Finished Successfully ---")
