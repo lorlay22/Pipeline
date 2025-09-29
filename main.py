@@ -6,8 +6,8 @@ import os
 def run_pipeline():
     """Main function to orchestrate the ETL pipeline."""
     
-    # --- SIMULATION STEP ---
-    print("--- Starting Data Simulation Step ---")
+    # SIMULATION STEP
+    print("Starting Data Simulation Step ")
     yesterday = (datetime.now() - timedelta(1)).strftime("%Y-%m-%d")
     for i in range(1, 11): # Simulate 10 machines
         data_simulator.simulate_machine_data(
@@ -15,10 +15,10 @@ def run_pipeline():
             date=yesterday, 
             output_path=config.RAW_DATA_DIR
         )
-    print("--- Data Simulation Complete ---\n")
+    print("Data Simulation Complete \n")
     
-    # --- ETL PIPELINE ---
-    print("--- Starting ETL Pipeline ---")
+    # ETL PIPELINE
+    print("Starting ETL Pipeline ")
     
     try:
         # 1. Extract
