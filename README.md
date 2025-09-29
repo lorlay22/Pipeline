@@ -32,8 +32,19 @@ The ETL process is broken down into three main stages:
 - A Google Cloud Platform (GCP) project with BigQuery API enabled.
 - `gcloud` CLI installed and authenticated.
 
-### 2. Setup
+### 2. Setup Execute the pipeline
 Clone the repository:
 ```bash
 git clone [https://github.com/VOTRE_NOM_UTILISATEUR/industrial-etl-pipeline.git](https://github.com/VOTRE_NOM_UTILISATEUR/industrial-etl-pipeline.git)
 cd industrial-etl-pipeline
+
+### Execute the pipelineExecute the Pipeline
+Run the main script to start the simulation and the ETL process:
+
+Bash
+python main.py
+
+This will:
+Simulate the creation of 10 raw data files in a raw_data directory.
+Run the full ETL pipeline on these files.
+Load the results into your BigQuery table.
