@@ -22,11 +22,7 @@ The primary goal of this pipeline is to automate the daily collection of sensor 
 The ETL process is broken down into three main stages:
 
 1.  **Extract**: Raw data files (simulated as CSVs) are collected from a source directory. Each file represents one day of data from one machine.
-2.  **Transform**: The raw data is loaded into a Pandas DataFrame. It undergoes a cleaning process which includes:
-    - Handling missing values (e.g., filling with median temperature).
-    - Correcting data types (e.g., converting timestamps).
-    - Mapping status codes to human-readable labels (e.g., 101 -> 'OPERATIONAL').
-    - Creating new, valuable features (e.g., calculating machine operating hours).
+2.  **Transform**: The raw data is loaded into a Pandas DataFrame. It undergoes a cleaning process which includes handling missing values, correcting data types, and mapping status codes to labels.
 3.  **Load**: The clean, transformed data is appended to a table in Google BigQuery, ready for analysis and dashboarding (e.g., in Looker Studio).
 
 ## How to Run This Project
