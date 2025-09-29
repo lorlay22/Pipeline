@@ -1,14 +1,7 @@
-Oui, bien sûr. Le texte que vous avez collé est un mélange de plusieurs parties, ce qui le rend confus.
 
-Voici une version réécrite, propre et bien organisée, que vous pouvez copier-coller directement dans votre fichier `README.md`. J'ai clarifié les étapes et séparé l'installation de l'exécution pour que ce soit plus logique pour un recruteur.
-
------
-
-# Industrial IoT ETL Pipeline for Process Control
+# Industrial ETL Pipeline for Process Control
 
 This repository demonstrates a complete, automated ETL (Extract, Transform, Load) pipeline written in Python. It simulates daily data collection from multiple industrial machines, processes and cleans the data, and loads it into Google BigQuery for analysis.
-
-This project is a practical implementation of the skills and experience listed on my resume, specifically concerning the design of automated data flows and process control monitoring.
 
 ## Project Goal
 
